@@ -60,8 +60,7 @@ for size in sizes:
     bin_times = []
     
     for i in range(1000):    # Repeat 1000 times
-        # For binary search, the list MUST be sorted
-        # No need to shuffle since we're using sorted data
+        # cant shuffle for binary search? 
         binary_time = timeit.timeit("binary_search(size//2, data)", 
                                      setup="from __main__ import binary_search, data, size", 
                                      number=100)
